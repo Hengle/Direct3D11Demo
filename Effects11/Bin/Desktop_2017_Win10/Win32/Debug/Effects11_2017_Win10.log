@@ -1,0 +1,8 @@
+﻿  d3dxGlobal.cpp
+  EffectAPI.cpp
+  EffectLoad.cpp
+  EffectNonRuntime.cpp
+  EffectReflection.cpp
+  EffectRuntime.cpp
+  正在生成代码...
+  Effects11_2017_Win10.vcxproj -> D:\DXUTprog\Effects11\Bin\Desktop_2017_Win10\Win32\Debug\Effects11d.lib
