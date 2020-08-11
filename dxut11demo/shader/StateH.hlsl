@@ -41,6 +41,14 @@ SamplerState   g_samLinear : register( s0 )
     AddressV = WRAP;
     AddressW = WRAP;
 };
+SamplerState   g_samLinearMIRROR : register( s1 )
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = MIRROR;
+    AddressV =MIRROR;
+    AddressW = MIRROR;
+};
+
 SamplerComparisonState gShadowSample : register(s1)
 {
     Filter = COMPARISON_MIN_MAG_LINEAR_MIP_POINT;
@@ -65,3 +73,6 @@ BlendState NoBlending
     AlphaToCoverageEnable = FALSE;
     BlendEnable[0] = FALSE;
 };
+
+static const float pi = 3.1415926f;
+static const float invpi = 1.f/pi;

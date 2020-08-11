@@ -28,43 +28,40 @@
     <None Include="..\DXUT\Optional\directx.ico">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="shader\Cube.fx">
+    <None Include="shader\test.fx">
       <Filter>shader</Filter>
     </None>
     <None Include="shader\Tutorial11.fx">
       <Filter>shader</Filter>
     </None>
-    <None Include="shader\basefx11.fx">
-      <Filter>shader</Filter>
-    </None>
-    <None Include="shader\dunamicVs.hlsl">
-      <Filter>shader\dynamic</Filter>
-    </None>
-    <None Include="shader\dynamicfx.fx">
-      <Filter>shader\dynamic</Filter>
-    </None>
-    <None Include="shader\dynamicMaterial.hlsl">
-      <Filter>shader\dynamic</Filter>
-    </None>
-    <None Include="shader\dynamicLight.h">
-      <Filter>shader\dynamic</Filter>
-    </None>
-    <None Include="shader\City.fx">
-      <Filter>shader</Filter>
-    </None>
     <None Include="shader\simpleBezier.fx">
       <Filter>shader</Filter>
     </None>
-    <None Include="shader\StateH.hlsl">
+    <None Include="shader\PSH.hlsl">
       <Filter>shader</Filter>
     </None>
-    <None Include="shader\PSH.hlsl">
+    <None Include="shader\PBR.fx">
       <Filter>shader</Filter>
     </None>
     <None Include="shader\MultiThreadShahder.fx">
       <Filter>shader</Filter>
     </None>
     <None Include="shader\debug.hlsl">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\Cube.fx">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\City.fx">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\Blinn-Phone.fx">
+      <Filter>shader</Filter>
+    </None>
+    <None Include="shader\dynamicMaterial.hlsl">
+      <Filter>shader\dynamic</Filter>
+    </None>
+    <None Include="shader\StateH.hlsl">
       <Filter>shader</Filter>
     </None>
   </ItemGroup>
@@ -111,6 +108,9 @@
       <Filter>Scenes</Filter>
     </ClCompile>
     <ClCompile Include="MultiThreadScene.cpp">
+      <Filter>Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="DeferredRendering.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,8 +161,22 @@
     <ClInclude Include="Scene\Singleton.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="shader\dynamicLight.h">
+      <Filter>shader\dynamic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="resource\sphere.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader\dunamicVs.hlsl">
+      <Filter>shader\dynamic</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\dynamicfx.fx">
+      <Filter>shader\dynamic</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\basefx11.fx">
+      <Filter>shader</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>

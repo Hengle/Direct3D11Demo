@@ -185,9 +185,9 @@ technique11 OcculuderTop
 {
     pass P0
     {
-        SetVertexShader(CompileShader(vs_4_0, VS()));
+        SetVertexShader(CompileShader(vs_5_0, VS()));
         SetGeometryShader(NULL);
-        SetPixelShader(CompileShader(ps_4_0, OccuPS()));
+        SetPixelShader(CompileShader(ps_5_0, OccuPS()));
 
         SetDepthStencilState(NoDepthTestWrite, 0);
         SetBlendState(BlendTop, float4(0.0f, 0.0f, 0.0f, 0.0f), 0xFFFFFFFF);

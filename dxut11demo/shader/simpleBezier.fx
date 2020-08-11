@@ -150,7 +150,7 @@ float4 PS(Domain_OUT Input)
 
 
 
-HullShader HS[2] = { CompileShader(hs_5_0, ControlHS()), CompileShader(hs_5_0, ControlHSOdd()) };
+//HullShader HS[2] = { CompileShader(hs_5_0, ControlHS()), CompileShader(hs_5_0, ControlHSOdd()) };
 
 technique11 Bezier
 {

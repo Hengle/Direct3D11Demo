@@ -124,7 +124,7 @@ static ID3DX11EffectScalarVariable*		   g_pEnvironmentLightEnable = nullptr;
 
 
 static ID3D11Predicate*						g_pOccluderPredicate[6];
-
+static bool						g_bOccluderRender = false;
 static CDXUTSDKMesh                        g_CityMesh;
 static CDXUTSDKMesh                        g_OccluderMesh;
 static CDXUTSDKMesh                        g_HeavyMesh;
@@ -352,17 +352,21 @@ void CALLBACK CityScene::OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11Devi
 	{
 		auto tmpM = XMMatrixRotationY(i*(XM_2PI / 6.f));
 		g_pWorldVariable->SetMatrix(reinterpret_cast<float*>(&tmpM));
-		
+
 		pd3dImmediateContext->Begin(g_pOccluderPredicate[i]);
 		g_pOcculuderTestTechnique->GetPassByIndex(0)->Apply(0, pd3dImmediateContext);
 		g_OccluderMesh.Render(pd3dImmediateContext, 0);
 		pd3dImmediateContext->End(g_pOccluderPredicate[i]);
 
 		pd3dImmediateContext->SetPredication(g_pOccluderPredicate[i], false);
-		
+
 		g_pTechnique->GetPassByIndex(0)->Apply(0, pd3dImmediateContext);
 		g_HeavyMesh.Render(pd3dImmediateContext, 0);
 		pd3dImmediateContext->SetPredication(nullptr, false);
+		if (g_bOccluderRender) {
+			g_pOccluderTechnique->GetPassByIndex(0)->Apply(0, pd3dImmediateContext);
+			g_OccluderMesh.Render(pd3dImmediateContext, 0);
+		}
 	}
 
 
@@ -404,7 +408,8 @@ void FrameUI()
 	
 
 	ImGui::Checkbox("wireframe", &g_bWireFrame);
-
+	ImGui::Checkbox("OccluderRender", &g_bOccluderRender);
+	
 }
 
 void CALLBACK CityScene::OnD3D11DestroyDevice(void* pUserContext)

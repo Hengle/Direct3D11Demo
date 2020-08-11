@@ -59,9 +59,9 @@ technique11 NormalGSEffect
 
     pass P0
     {
-        SetVertexShader(CompileShader(vs_4_0, normalVS()));
-        SetGeometryShader(CompileShader(gs_4_0, normalGS()));
-        SetPixelShader(CompileShader(ps_4_0, normalPS()));
+        SetVertexShader(CompileShader(vs_5_0, normalVS()));
+        SetGeometryShader(CompileShader(gs_5_0, normalGS()));
+        SetPixelShader(CompileShader(ps_5_0, normalPS()));
 
         SetDepthStencilState(EnableDepth, 0);
         SetBlendState(NoBlending, float4(0.0f, 0.0f, 0.0f, 0.0f), 0xFFFFFFFF);

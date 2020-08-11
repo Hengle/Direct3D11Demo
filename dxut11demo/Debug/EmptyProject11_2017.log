@@ -1,3 +1,109 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(EmptyProject11.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
   resource\sphere.obj
+  EmptyProject11.cpp
+d:\dxutprog\dxut11demo\emptyproject11.cpp(67): warning C4189: “io”: 局部变量已初始化但不引用
+d:\dxutprog\dxut11demo\emptyproject11.cpp(223): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
+  CityScene.cpp
+d:\dxutprog\dxut11demo\cityscene.cpp(11): warning C4091: “static ”: 没有声明变量时忽略“SimpleVertex”的左侧
+d:\dxutprog\dxut11demo\cityscene.cpp(17): warning C4091: “static ”: 没有声明变量时忽略“CBChangesEveryFrame”的左侧
+d:\dxutprog\dxut11demo\cityscene.cpp(25): warning C4091: “static ”: 没有声明变量时忽略“MaterialVars”的左侧
+d:\dxutprog\dxut11demo\cityscene.cpp(33): warning C4091: “static ”: 没有声明变量时忽略“AmientEnum”的左侧
+d:\dxutprog\dxut11demo\cityscene.cpp(42): warning C4091: “static ”: 没有声明变量时忽略“MaterialEnum”的左侧
+d:\dxutprog\dxut11demo\cityscene.cpp(235): warning C4101: “VsPassDesc”: 未引用的局部变量
+  DeferredRendering.cpp
+d:\dxutprog\dxut11demo\deferredrendering.cpp(11): warning C4091: “static ”: 没有声明变量时忽略“SimpleVertex”的左侧
+d:\dxutprog\dxut11demo\deferredrendering.cpp(17): warning C4091: “static ”: 没有声明变量时忽略“CBChangesEveryFrame”的左侧
+  Gemotry.cpp
+  Misc.cpp
+  MultiThreadScene.cpp
+d:\dxutprog\dxut11demo\multithreadscene.cpp(110): warning C4091: “static ”: 没有声明变量时忽略“PerObj”的左侧
+d:\dxutprog\dxut11demo\multithreadscene.cpp(118): warning C4091: “static ”: 没有声明变量时忽略“PerFrame”的左侧
+d:\dxutprog\dxut11demo\multithreadscene.cpp(265): warning C4245: “=”: 从“int”转换到“UINT”，有符号/无符号不匹配
+d:\dxutprog\dxut11demo\multithreadscene.cpp(292): warning C4244: “=”: 从“int”转换到“FLOAT”，可能丢失数据
+d:\dxutprog\dxut11demo\multithreadscene.cpp(293): warning C4244: “=”: 从“int”转换到“FLOAT”，可能丢失数据
+d:\dxutprog\dxut11demo\multithreadscene.cpp(441): warning C4189: “pd3dImmediateContext”: 局部变量已初始化但不引用
+d:\dxutprog\dxut11demo\multithreadscene.cpp(612): warning C4189: “hr”: 局部变量已初始化但不引用
+d:\dxutprog\dxut11demo\multithreadscene.cpp(688): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+d:\dxutprog\dxut11demo\multithreadscene.cpp(689): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+d:\dxutprog\dxut11demo\multithreadscene.cpp(702): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+d:\dxutprog\dxut11demo\multithreadscene.cpp(711): warning C4456: “cbperObj”的声明隐藏了上一个本地声明
+  d:\dxutprog\dxut11demo\multithreadscene.cpp(681): note: 参见“cbperObj”的声明
+d:\dxutprog\dxut11demo\multithreadscene.cpp(639): warning C4189: “hr”: 局部变量已初始化但不引用
+d:\dxutprog\dxut11demo\multithreadscene.cpp(830): warning C4238: 使用了非标准扩展: 类 rvalue 用作了 lvalue
+d:\dxutprog\dxut11demo\multithreadscene.cpp(995): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  Scene.cpp
+d:\dxutprog\dxut11demo\scene.cpp(19): warning C4100: “pd3dDevice”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(24): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(23): warning C4100: “pBackBufferSurfaceDesc”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(23): warning C4100: “pd3dDevice”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(30): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(30): warning C4100: “pBackBufferSurfaceDesc”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(29): warning C4100: “pSwapChain”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(29): warning C4100: “pd3dDevice”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(35): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(35): warning C4100: “fElapsedTime”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(35): warning C4100: “fTime”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(34): warning C4100: “pd3dImmediateContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(34): warning C4100: “pd3dDevice”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(40): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(40): warning C4100: “bWindowed”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(40): warning C4100: “BackBufferFormat”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(39): warning C4100: “DeviceInfo”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(39): warning C4100: “Output”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(39): warning C4100: “AdapterInfo”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(44): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(48): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(53): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(53): warning C4100: “bAltDown”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(53): warning C4100: “bKeyDown”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(53): warning C4100: “nChar”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(59): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(59): warning C4100: “yPos”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(59): warning C4100: “xPos”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(58): warning C4100: “nMouseWheelDelta”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(58): warning C4100: “bSideButton2Down”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(58): warning C4100: “bSideButton1Down”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(57): warning C4100: “bMiddleButtonDown”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(57): warning C4100: “bRightButtonDown”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(57): warning C4100: “bLeftButtonDown”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(64): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(64): warning C4100: “pbNoFurtherProcessing”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(63): warning C4100: “lParam”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(63): warning C4100: “wParam”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(63): warning C4100: “uMsg”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(63): warning C4100: “hWnd”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(68): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(72): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(72): warning C4100: “pDeviceSettings”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(76): warning C4100: “pUserContext”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(76): warning C4100: “fElapsedTime”: 未引用的形参
+d:\dxutprog\dxut11demo\scene.cpp(76): warning C4100: “fTime”: 未引用的形参
+  basefx11.cpp
+d:\dxutprog\dxut11demo\basefx11.cpp(11): warning C4091: “static ”: 没有声明变量时忽略“SimpleVertex”的左侧
+d:\dxutprog\dxut11demo\basefx11.cpp(17): warning C4091: “static ”: 没有声明变量时忽略“CBChangesEveryFrame”的左侧
+d:\dxutprog\dxut11demo\basefx11.cpp(165): warning C4244: “=”: 从“UINT64”转换到“UINT”，可能丢失数据
+  defaultScene.cpp
+d:\dxutprog\dxut11demo\defaultscene.cpp(11): warning C4091: “static ”: 没有声明变量时忽略“SimpleVertex”的左侧
+d:\dxutprog\dxut11demo\defaultscene.cpp(17): warning C4091: “static ”: 没有声明变量时忽略“CBChangesEveryFrame”的左侧
+d:\dxutprog\dxut11demo\defaultscene.cpp(133): warning C4189: “offset”: 局部变量已初始化但不引用
+d:\dxutprog\dxut11demo\defaultscene.cpp(132): warning C4189: “stride”: 局部变量已初始化但不引用
+  dynamicScene.cpp
+d:\dxutprog\dxut11demo\dynamicscene.cpp(11): warning C4091: “static ”: 没有声明变量时忽略“SimpleVertex”的左侧
+d:\dxutprog\dxut11demo\dynamicscene.cpp(17): warning C4091: “static ”: 没有声明变量时忽略“CBChangesEveryFrame”的左侧
+d:\dxutprog\dxut11demo\dynamicscene.cpp(25): warning C4091: “static ”: 没有声明变量时忽略“MaterialVars”的左侧
+d:\dxutprog\dxut11demo\dynamicscene.cpp(33): warning C4091: “static ”: 没有声明变量时忽略“AmientEnum”的左侧
+d:\dxutprog\dxut11demo\dynamicscene.cpp(42): warning C4091: “static ”: 没有声明变量时忽略“MaterialEnum”的左侧
+d:\dxutprog\dxut11demo\dynamicscene.cpp(396): warning C4101: “showSpec”: 未引用的局部变量
+d:\dxutprog\dxut11demo\dynamicscene.cpp(395): warning C4101: “showbuff”: 未引用的局部变量
+d:\dxutprog\dxut11demo\dynamicscene.cpp(469): warning C4189: “hr”: 局部变量已初始化但不引用
+  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_impl_dx11.cpp
+  imgui_impl_win32.cpp
+  imgui_widgets.cpp
+  BezierScene.cpp
+  正在生成代码...
+d:\dxutprog\dxut11demo\multithreadscene.cpp(315): warning C4715: “initdynamicCube”: 不是所有的控件路径都返回值
   EmptyProject11_2017.vcxproj -> D:\DXUTprog\dxut11demo\Debug\dx11Demo.exe

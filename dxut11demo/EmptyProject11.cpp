@@ -23,10 +23,11 @@ enum SceneEnum
 	dynamicLinkSceneE = 2,
 	CitySceneE = 3,
 	MultiSceneE = 4,
+	DeferredRenderingE = 5,
 	SceneCount
 };
-std::string ScenesName[] = { "defaultScene","basefx11Scene","dynamicLinkScene","CityScene","MultiThreadScene" };
-int ScenesSelecter = 4;
+std::string ScenesName[] = { "defaultScene","basefx11Scene","dynamicLinkScene","CityScene","MultiThreadScene","DeferredRendering" };
+int ScenesSelecter = baseFx11SceneE;
 
 LRUScenes scenesList(4);
 
@@ -75,7 +76,7 @@ HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFAC
 	ImGui_ImplWin32_Init(DXUTGetHWND());
 	ImGui_ImplDX11_Init(pd3dDevice, pd3dImmediateContext);
 
-	dynamicScene = scenesList.Put(MultiThreadScene::Instance());
+	dynamicScene = scenesList.Put(baseFx11Scene::Instance());
 
 	auto hr = dynamicScene->OnD3D11CreateDevice(pd3dDevice, pBackBufferSurfaceDesc, pUserContext);
 	
@@ -162,6 +163,7 @@ void SelectSceneUI()
 
 void UpdateScene(ID3D11Device* pd3dDevice)
 {
+	auto pd3dImmediateContext = DXUTGetD3D11DeviceContext();
 	dynamicScene = scenesList.Get(ScenesName[ScenesSelecter]);
 	if (dynamicScene == nullptr)
 	{
@@ -180,13 +182,18 @@ void UpdateScene(ID3D11Device* pd3dDevice)
 			break;
 		case MultiSceneE:
 			dynamicScene = scenesList.Put(MultiThreadScene::Instance());
+			break;
+		case DeferredRenderingE:
+			scenesList.Put(DeferredRendering::Instance());
+			break;
 		default :
 			break;
 		}
-		
+		pd3dImmediateContext->ClearState();
+		DXUTSetupD3D11Views(pd3dImmediateContext);
 		dynamicScene->IsInit(pd3dDevice);
 	}
-
+	
 }
 //--------------------------------------------------------------------------------------
 // Render the scene using the D3D11 device

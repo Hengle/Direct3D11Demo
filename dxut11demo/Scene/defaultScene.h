@@ -205,3 +205,33 @@ private:
 	SceneImpl*pImpl;
 };
 
+
+class DeferredRendering :public Scene, public Singleton<DeferredRendering>
+{
+	friend Singleton<DeferredRendering>;
+public:
+	virtual HRESULT initScene(ID3D11Device* pd3dDevice);
+	virtual std::string getName();
+	/*CallbackD3D11*/
+	virtual HRESULT CALLBACK OnD3D11CreateDevice(ID3D11Device* pd3dDevice, const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc,
+		void* pUserContext);
+	virtual HRESULT CALLBACK OnD3D11ResizedSwapChain(ID3D11Device* pd3dDevice, IDXGISwapChain* pSwapChain,
+		const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext);
+	virtual void CALLBACK OnD3D11FrameRender(ID3D11Device* pd3dDevice, ID3D11DeviceContext* pd3dImmediateContext,
+		double fTime, float fElapsedTime, void* pUserContext);
+
+	virtual void CALLBACK OnD3D11DestroyDevice(void* pUserContext);
+
+	/*DXUT Callback*/
+
+	virtual LRESULT CALLBACK MsgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
+		bool* pbNoFurtherProcessing, void* pUserContext);
+
+	virtual void CALLBACK OnFrameMove(double fTime, float fElapsedTime, void* pUserContext);
+	virtual ~DeferredRendering();
+private:
+
+	std::string sceneName = "DeferredRendering";
+	DeferredRendering() :Scene() {};
+	SceneImpl*pImpl;
+};

@@ -147,7 +147,8 @@ HRESULT baseFx11Scene::initScene(ID3D11Device* pd3dDevice)
 	pd3dImmediateContext->IASetInputLayout(g_pVertexLayout.Get());
 
 	// Load the mesh
-	V_RETURN(g_Mesh.Create(pd3dDevice, L"resource\\sphere.sdkmesh"));
+
+	V_RETURN(g_Mesh.Create(pd3dDevice, L"resource\\tiny.sdkmesh"));
 
 
 	// create user d3dbuffer

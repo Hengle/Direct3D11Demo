@@ -301,9 +301,9 @@ technique11 DynamicNormalGSEffect
 {
     pass P0
     {
-        SetVertexShader(CompileShader(vs_4_0, VS()));
-        SetGeometryShader(ConstructGSWithSO(CompileShader(gs_4_0, outputGS()), "0:POSITION.xyz; 0:TEXCOORD0.xyz;0:TEXCOORD1.xy", NULL, NULL, NULL, 0));
-        SetPixelShader(CompileShader(ps_4_0, BasePS()));
+        SetVertexShader(CompileShader(vs_5_0, VS()));
+        SetGeometryShader(ConstructGSWithSO(CompileShader(gs_5_0, outputGS()), "0:POSITION.xyz; 0:TEXCOORD0.xyz;0:TEXCOORD1.xy", NULL, NULL, NULL, 0));
+        SetPixelShader(CompileShader(ps_5_0, BasePS()));
 
         SetDepthStencilState(EnableDepth, 0);
         SetBlendState(NoBlending, float4(0.0f, 0.0f, 0.0f, 0.0f), 0xFFFFFFFF);
@@ -312,9 +312,9 @@ technique11 DynamicNormalGSEffect
     pass P1
     {
 
-        SetVertexShader(CompileShader(vs_4_0, DynamicNormalVS()));
-        SetGeometryShader(CompileShader(gs_4_0, normalGS()));
-        SetPixelShader(CompileShader(ps_4_0, normalPS()));
+        SetVertexShader(CompileShader(vs_5_0, DynamicNormalVS()));
+        SetGeometryShader(CompileShader(gs_5_0, normalGS()));
+        SetPixelShader(CompileShader(ps_5_0, normalPS()));
 
         SetDepthStencilState(EnableDepth, 0);
         SetBlendState(NoBlending, float4(0.0f, 0.0f, 0.0f, 0.0f), 0xFFFFFFFF);
